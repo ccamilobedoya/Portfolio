@@ -13,5 +13,15 @@
     "title": "Third project",
     "image": "project1.JPG",
     "id": 3
+  },
+  "project4": {
+    "title": "Third project",
+    "image": "project2.JPG",
+    "id": 4
+  },
+  "project5": {
+    "title": "Third project",
+    "image": "project1.JPG",
+    "id": 5
   }
 }
