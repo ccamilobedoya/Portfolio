@@ -1,0 +1,45 @@
+@mixin parallelogram ($degree){
+	-webkit-transform: skew($degree);
+	   -moz-transform: skew($degree);
+	     -o-transform: skew($degree);
+}
+
+@mixin pointer {
+    width: 200px;
+    height: 40px;
+    position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+	}
+  &:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid red;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+}
+
+@mixin parallelogram-clip {
+	-webkit-clip-path: polygon(45px 0, 98% 0, -webkit-calc(#{100%} - #{45px}) 100%, 2% 100%);
+	-moz-clip-path: polygon(45px 0, 98% 0, -moz-calc(#{100%} - #{45px}) 100%, 2% 100%);
+	clip-path: polygon(45px 0, 98% 0, calc(#{100%} - #{45px}) 100%, 2% 100%);
+}
+
+@mixin hexagon {
+	-webkit-clip-path: polygon(5% 0, 95% 0, 98% 50%, 95% 100%, 5% 100%, 2% 50%);
+	clip-path: polygon(5% 0, 95% 0, 98% 50%, 95% 100%, 5% 100%, 2% 50%);
+}

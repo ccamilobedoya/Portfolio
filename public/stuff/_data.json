@@ -1,0 +1,17 @@
+{
+  "project1": {
+    "title": "First project",
+    "image": "project1.JPG",
+    "id": 1
+  },
+  "project2": {
+    "title": "Second project",
+    "image": "project2.JPG",
+    "id": 2
+  },
+  "project3": {
+    "title": "Third project",
+    "image": "project1.JPG",
+    "id": 3
+  }
+}

@@ -1,0 +1,61 @@
+//-
+  h1 Portfolio
+  .item-container
+    for stuff, slug in public.stuff._data
+      a#item(
+      class="item"
+      href="/stuff/#{ slug }"
+      )
+      .item-back(
+      style="background-image:url(./images/#{stuff.image})"
+      )
+      .item-front(class="#{slug}")
+.full-container
+  .b6
+  .b5
+  .b4
+  .b3
+  .b2
+  .b1
+    for stuff, slug in public.stuff._data
+      svg(class='b-item' version='1.1', xmlns:x='&ns_extend;', xmlns:i='&ns_ai;', xmlns:graph='&ns_graphs;', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 2048 720', enable-background='new 0 0 2048 720', xml:space='preserve')
+        defs
+          pattern(id='portfolio-image-#{stuff.id}' x='617', y='242', patternunits='userSpaceOnUse', height='344.3', width='814')
+            image(x='0', y='0', xlink:href='/images/#{stuff.image}')
+        g#b1
+          line#XMLID_407_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='768.5', y1='601', x2='768.5', y2='672')
+          line#XMLID_406_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='684.5', y1='662.7', x2='768.5', y2='633.7')
+          line#XMLID_411_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='684.5', y1='691.7', x2='768.5', y2='662.7')
+          line#XMLID_409_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='684.5', y1='633.7', x2='768.5', y2='604.7')
+          line#XMLID_410_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='684.5', y1='604.7', x2='768.5', y2='575.7')
+          line#XMLID_408_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='768.5', y1='691.7', x2='684.5', y2='662.7')
+          line#XMLID_413_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='768.5', y1='662.7', x2='684.5', y2='633.7')
+          line#XMLID_414_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='768.5', y1='633.7', x2='684.5', y2='604.7')
+          line#XMLID_415_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='768.5', y1='604.7', x2='684.5', y2='575.7')
+          line#XMLID_424_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='1366.5', y1='601', x2='1366.5', y2='672')
+          line#XMLID_425_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='1282.5', y1='601', x2='1282.5', y2='672')
+          line#XMLID_423_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='1282.5', y1='662.7', x2='1366.5', y2='633.7')
+          line#XMLID_422_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='1282.5', y1='691.7', x2='1366.5', y2='662.7')
+          line#XMLID_421_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='1282.5', y1='633.7', x2='1366.5', y2='604.7')
+          line#XMLID_420_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='1282.5', y1='604.7', x2='1366.5', y2='575.7')
+          line#XMLID_419_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='1366.5', y1='691.7', x2='1282.5', y2='662.7')
+          line#XMLID_418_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='1366.5', y1='662.7', x2='1282.5', y2='633.7')
+          line#XMLID_417_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='1366.5', y1='633.7', x2='1282.5', y2='604.7')
+          line#XMLID_416_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='1366.5', y1='604.7', x2='1282.5', y2='575.7')
+          lineargradient#XMLID_719_(gradientunits='userSpaceOnUse', x1='1024', y1='672.1298', x2='1024', y2='704.9373')
+            stop(offset='0', style='stop-color:#32184A')
+            stop(offset='1', style='stop-color:#453470')
+          rect#XMLID_13_(x='461', y='672', fill='url(#XMLID_719_)', width='1126', height='48')
+          rect#XMLID_10_(x='603', y='227', fill='#3A2D4C', width='842', height='374')
+          line#XMLID_405_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='684.5', y1='601', x2='684.5', y2='672')
+          polygon#XMLID_412_(fill='#3A2D4C', points='868,633.7 798.7,633.7 790.3,610.3 877.7,610.3 	')
+          rect#XMLID_426_(x='807', y='601', fill='#3A2D4C', width='2', height='9.3')
+          rect#XMLID_428_(x='860.3', y='601', fill='#3A2D4C', width='2', height='9.3')
+          polygon#XMLID_431_(fill='#3A2D4C', points='1255,633.7 1185.7,633.7 1177.3,610.3 1264.7,610.3 	')
+          rect#XMLID_430_(x='1194', y='601', fill='#3A2D4C', width='2', height='9.3')
+          rect#XMLID_429_(x='1247.3', y='601', fill='#3A2D4C', width='2', height='9.3')
+          a(href="/stuff/#{ slug }")
+            polygon#Image(fill="url(#portfolio-image-#{stuff.id})" points="617,242 617,586 1431,586.3 1431,242 	")
+          // <rect id="XMLID_427_" x="617" y="242" fill="#4C4851" width="814" height="344.3"/>
+  .arrow-rigth 
+  .arrow-left    

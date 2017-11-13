@@ -1,0 +1,170 @@
+// Usage:   @include border-radius(10px);
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($width, $height, $blur, $radius, $color) {
+     -moz-box-shadow: $width $height $blur $radius $color;
+  -webkit-box-shadow: $width $height $blur $radius $color;
+          box-shadow: $width $height $blur $radius $color;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+// Reference: https://gist.github.com/tobiasahlin/7a421fb9306a4f518aab
+// Usage:     @include transition(width, height 0.3s ease-in-out);
+// Output:    -webkit-transition(width 0.2s, height 0.3s ease-in-out);
+//            transition(width 0.2s, height 0.3s ease-in-out);
+
+// Pass in any number of transitions
+@mixin transition($transitions...) {
+  $unfoldedTransitions: ();
+  @each $transition in $transitions {
+    $unfoldedTransitions: append($unfoldedTransitions, unfoldTransition($transition), comma);
+  }
+
+  -webkit-transition: $unfoldedTransitions;
+  transition: $unfoldedTransitions;
+}
+
+@function unfoldTransition ($transition) {
+  // Default values
+  $property: all;
+  $duration: .2s;
+  $easing: null; // Browser default is ease, which is what we want
+  $delay: null; // Browser default is 0, which is what we want
+  $defaultProperties: ($property, $duration, $easing, $delay);
+
+  // Grab transition properties if they exist
+  $unfoldedTransition: ();
+  @for $i from 1 through length($defaultProperties) {
+    $p: null;
+    @if $i <= length($transition) {
+      $p: nth($transition, $i)
+    } @else {
+      $p: nth($defaultProperties, $i)
+    }
+    $unfoldedTransition: append($unfoldedTransition, $p);
+  }
+
+  @return $unfoldedTransition;
+}
+
+@mixin text-shadow( $top: 3px, $left: 3px, $blur: 3px , $colour: #333 ) {
+  -webkit-text-shadow:$top $left $blur $colour;
+  -moz-text-shadow:$top $left $blur $colour;
+  -o-text-shadow:$top $left $blur $colour;
+  text-shadow:$top $left $blur $colour;
+}
+
+@mixin rounded-corners($tl : 4px, $tr : 4px, $br: 4px, $bl: 4px) {
+  -webkit-border-radius:$tl $tr $br $bl;
+  -moz-border-radius:$tl $tr $br $bl;
+  -o-border-radius:$tl $tr $br $bl;
+  border-radius:$tl $tr $br $bl;
+}
+
+@mixin rotate( $val: -2deg ) {
+  -webkit-transform: rotate($val);
+  -moz-transform: rotate($val);
+  -ms-transform: rotate($val);
+  -o-transform: rotate($val);
+  transform: rotate($val);
+}
+
+@mixin transform($val) {
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -ms-transform: $val;
+  transform: $val;
+}
+
+@mixin transform-origin($val) {
+  -webkit-transform-origin: $val;
+  -moz-transform-origin: $val;
+  -ms-transform-origin: $val;
+  transform-origin: $val;
+}
+
+@mixin transform-style($val) {
+  -webkit-transform-style: $val;
+  -moz-transform-style: $val;
+  -ms-transform-style: $val;
+  transform-style: $val;
+}
+
+@mixin perspective($val) {
+  -webkit-perspective: $val;
+  -moz-perspective: $val;
+  -ms-perspective: $val;
+  perspective: $val;
+}
+
+@mixin perspective-origin($val){
+  -webkit-perspective-origin: $val;
+  -moz-perspective-origin: $val;
+  -ms-perspective-origin: $val;
+  perspective-origin: $val;
+}
+
+@mixin bg-gradient-t2b($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin bg-gradient-l2r($start-colour, $end-colour) {
+    background-color: $start-colour;
+    background-image: -webkit-gradient(linear, left top, right top, from($start-colour), to($end-colour));
+    background-image: -webkit-linear-gradient(left, $start-colour, $end-colour);
+    background-image:    -moz-linear-gradient(left, $start-colour, $end-colour);
+    background-image:     -ms-linear-gradient(left, $start-colour, $end-colour);
+    background-image:      -o-linear-gradient(left, $start-colour, $end-colour);
+    background-image:         linear-gradient(left, $start-colour, $end-colour);
+    filter:            progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}', gradientType='1');
+}
+
+@mixin antialiasing( $type:antialiased ) {
+  /* antialiased, none, subpixel-antialiased*/
+	-webkit-font-smoothing: $type;
+	font-smoothing: $type;
+	font-smooth: always;
+}
