@@ -70,7 +70,12 @@ body{
   @extend .b;
   background-image: url(../images/b6.png);
 }
+
 .arrow-rigth {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   width: 10%;
   height: 100%;
@@ -82,6 +87,10 @@ body{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#337ddeff',GradientType=1 ); /* IE6-9 */
 }
 .arrow-left {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   width: 10%;
   height: 100%;
@@ -91,4 +100,20 @@ body{
   background: -webkit-linear-gradient(left, rgba(125,222,255,0.1) 0%,rgba(30,87,153,0) 99%,rgba(30,87,153,0) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, rgba(125,222,255,0.1) 0%,rgba(30,87,153,0) 99%,rgba(30,87,153,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#337ddeff', endColorstr='#001e5799',GradientType=1 ); /* IE6-9 */
+}
+.r-arrow {
+  display: flex;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 0 40px 40px;
+  border-color: transparent transparent transparent rgba(#b28cde, 0.2);
+}
+.l-arrow {
+  display: flex;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 40px 40px 0;
+  border-color: transparent rgba(#b28cde, 0.2) transparent transparent;
 }
