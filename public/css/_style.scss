@@ -10,7 +10,20 @@ body{
   color: #444;
   margin: 0;
 }
-
+.header-container {
+  padding-top: 10vh;
+}
+.name {
+  color: #8B5B97;
+  font-size: 14vh;
+  font-family: $gochi;
+}
+.sub-name {
+  margin-top: -2vh;
+  color: #8B5B97;
+  font-size: 4vh;
+  font-family: $source;
+}
 .img-fitter {
   width: 100%;
   height: auto;
