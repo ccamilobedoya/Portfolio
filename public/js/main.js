@@ -9,6 +9,20 @@ $('.arrow-left').click(function(){
   moveLeft();
 });
 
+var arrWidthBackup = 10;
+$('.arrow-rigth').hover(function(){
+  $(this).css('width', (arrWidthBackup + 4) + '%');
+  $()
+}, function(){
+  $(this).css('width', (arrWidthBackup) + '%');
+});
+$('.arrow-left').hover(function(){
+  $(this).css('width', (arrWidthBackup + 4) + '%');
+  $()
+}, function(){
+  $(this).css('width', (arrWidthBackup) + '%');
+});
+
 $(window).on( 'DOMMouseScroll mousewheel', function ( event ) {
   if( event.detail > 0 || event.originalEvent.wheelDelta < 0) {
     //scroll down
