@@ -9,13 +9,16 @@ $('.arrow-left').click(function(){
   moveLeft();
 });
 
-$(window).bind('mousewheel', function(event) {
-    if (event.originalEvent.wheelDelta >= 0) {
-      moveLeft();
-    }
-    else {
-      moveRigth()
-    }
+$(window).on( 'DOMMouseScroll mousewheel', function ( event ) {
+  if( event.detail > 0 || event.originalEvent.wheelDelta < 0) {
+    //scroll down
+    moveRigth();
+  } else {
+    //scroll up
+    moveLeft();
+  }
+  //prevent page fom scrolling
+  return false;
 });
 
 function moveBackground (actualPos) {

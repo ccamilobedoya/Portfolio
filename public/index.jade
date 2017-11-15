@@ -20,8 +20,8 @@
     for stuff, slug in public.stuff._data
       svg(class='b-item' version='1.1', xmlns:x='&ns_extend;', xmlns:i='&ns_ai;', xmlns:graph='&ns_graphs;', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 2048 720', enable-background='new 0 0 2048 720', xml:space='preserve')
         defs
-          pattern(id='portfolio-image-#{stuff.id}' x='617', y='242', patternunits='userSpaceOnUse', height='344.3', width='814')
-            image(x='0', y='0', xlink:href='/images/#{stuff.image}')
+          pattern(id='portfolio-image-#{stuff.id}' x='617' y='242' patternunits='userSpaceOnUse' height='344.3' width='814')
+            image(x='0' y='0'  height='344.3' width='814' href='/images/#{stuff.image}')
         g#b1
           line#XMLID_407_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='768.5', y1='601', x2='768.5', y2='672')
           line#XMLID_406_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='684.5', y1='662.7', x2='768.5', y2='633.7')
@@ -55,7 +55,7 @@
           rect#XMLID_430_(x='1194', y='601', fill='#3A2D4C', width='2', height='9.3')
           rect#XMLID_429_(x='1247.3', y='601', fill='#3A2D4C', width='2', height='9.3')
           a(href="/stuff/#{ slug }")
-            polygon#Image(fill="url(#portfolio-image-#{stuff.id})" points="617,242 617,586 1431,586.3 1431,242 	")
+            polygon#Image(fill="url(#portfolio-image-#{stuff.id})" points="617 242 617 586 1431 586.3 1431 242")
           // <rect id="XMLID_427_" x="617" y="242" fill="#4C4851" width="814" height="344.3"/>
   .arrow-rigth 
     .r-arrow
