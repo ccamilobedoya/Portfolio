@@ -160,3 +160,16 @@ body{
   border-width: 3vh 3vh 3vh 0;
   border-color: transparent rgba(#b28cde, 0.2) transparent transparent;
 }
+
+text {
+  font-family: $source;
+  font-weight: bold;
+  font-size: 8vh;
+}
+
+.billboard-title-panel {
+    background-color: rgb(74, 235, 242);
+    span {
+      background-color: rgb(74, 235, 242);
+    }
+}

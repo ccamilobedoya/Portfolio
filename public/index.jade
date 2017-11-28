@@ -31,6 +31,10 @@
         defs
           pattern(id='portfolio-image-#{stuff.id}' x='617' y='242' patternunits='userSpaceOnUse' height='344.3' width='814')
             image(x='0' y='0'  height='344.3' width='814' href='/images/#{stuff.image}')
+          filter(id="floodFilter" x="-0.1" y="-0.1" width="1.2" height="1.2")
+            feFlood(flood-color="#332545")
+            feComposite(in="SourceGraphic" )
+
         g#b1
           line#XMLID_407_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='768.5', y1='601', x2='768.5', y2='672')
           line#XMLID_406_(fill='none', stroke='#3A2D4C', stroke-width='7', stroke-miterlimit='10', x1='684.5', y1='662.7', x2='768.5', y2='633.7')
@@ -64,7 +68,15 @@
           rect#XMLID_430_(x='1194', y='601', fill='#3A2D4C', width='2', height='9.3')
           rect#XMLID_429_(x='1247.3', y='601', fill='#3A2D4C', width='2', height='9.3')
           a(href="/stuff/#{ slug }")
-            polygon#Image(fill="url(#portfolio-image-#{stuff.id})" points="617 242 617 586 1431 586.3 1431 242")
+            polygon#Image(fill="url(#portfolio-image-#{stuff.id})" points="617, 242, 617, 586, 1431, 586, 1431, 242")
+            //polygon(fill="#8B5B97" points="617, 242, 500, 414, 617, 586, 1431, 586, 1431, 242")
+            //text#billboard-text(x="1431" y="242" text-anchor="middle" fill="white" filter="url(#floodFilter)" transform="rotate(7 1431,242)") #{stuff.title} 
+            foreignObject(x="1431" y="242" transform="rotate(15 1431,242)")
+              .billboard-title-panel(xmlns="http://www.w3.org/1999/xhtml") 
+                span #{stuff.title} 
+                  
+            //polygon(fill='none',points="617 242 617 586 1431 586.3 1431 242").project-title-shape algo
+              //.project-title-name #{stuff.title}
           // <rect id="XMLID_427_" x="617" y="242" fill="#4C4851" width="814" height="344.3"/>
   .arrow-rigth 
     .r-arrow
