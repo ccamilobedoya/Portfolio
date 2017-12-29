@@ -15,12 +15,12 @@
     "id": 3
   },
   "project4": {
-    "title": "Third project",
+    "title": "ProjectWithoutSpaces",
     "image": "project2.JPG",
     "id": 4
   },
   "project5": {
-    "title": "Third project",
+    "title": "Project with a really really long name",
     "image": "project1.JPG",
     "id": 5
   }

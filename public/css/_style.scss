@@ -168,8 +168,15 @@ text {
 }
 
 .billboard-title-panel {
-    background-color: rgb(74, 235, 242);
+  width: 28vw;
+  text-align: right;
     span {
-      background-color: rgb(74, 235, 242);
+      background-color: #342b41;
+      font-family: $source;
+      font-size: 8vh;
+      line-height: 1;
+      color: #c886c2;
+      //color: #8B5B97;
+      text-transform: uppercase;
     }
 }
