@@ -1,0 +1,10 @@
+.blog
+  .blog-container
+    .blog-title Ethereal Impulse
+    .blog-field 
+      p This is one of the very first games I made with Unity, and that's back in ... well, it's made with Unity 4. The objective is to pass trough that shiny floating tables, each color means that the table could accelerate or fall down or make the player jump, the game also uses the device accelerometer to stabilize the player's ship (because randomnly changes some kind of side-gravity).
+      p Some screenshots ...
+      for image in public.images.ethereal._contents
+        img.blog-img(src="../images/ethereal/#{ image }")
+      p By the way, that arrow pointing left in the last screenshot, that's the way the player need to rotate the device to balance that side-gravity, and that's how the player could avoid being pushed off the platforms.
+      p ... Also, the game had an integration with Parse services for the scoreboard (Now it does not exist, at least not how it used to be).

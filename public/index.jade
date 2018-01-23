@@ -9,7 +9,8 @@
       .item-back(
       style="background-image:url(./images/#{stuff.image})"
       )
-      .item-front(class="#{slug}")
+      .item-front(class="#{slug}")        
+      
 .header-container
   .name I'm Cristian
   .sub-name ... a game development enthusiast 
@@ -30,7 +31,7 @@
       svg(class='b-item' version='1.1', xmlns:x='&ns_extend;', xmlns:i='&ns_ai;', xmlns:graph='&ns_graphs;', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 2048 720', enable-background='new 0 0 2048 720', xml:space='preserve')
         defs
           pattern(id='portfolio-image-#{stuff.id}' x='617' y='242' patternunits='userSpaceOnUse' height='344.3' width='814')
-            image(x='0' y='0'  height='344.3' width='814' href='/images/#{stuff.image}')
+            image(x='0' y='0'  height='344.3' width='814' href='/images/#{stuff.image}' class="img-fitter")
           filter(id="floodFilter" x="-0.1" y="-0.1" width="1.2" height="1.2")
             feFlood(flood-color="#332545")
             feComposite(in="SourceGraphic" )
