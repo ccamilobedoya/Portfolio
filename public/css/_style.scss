@@ -50,6 +50,8 @@ body{
   }
 }
 .img-fitter {
+  //display: table-cell;
+  max-width: 814px;
   width: 814px;
   height: auto;
 }

@@ -1,0 +1,12 @@
+.blog
+  .blog-container
+    .blog-title Fuerza Vectorial
+    .blog-field 
+      p This is a game made for the Universidad de Antioquia, the main idea is to teach force summation represented with vectors.
+      
+      for image in public.images.vector._contents
+        img.blog-img(src="../images/vector/#{ image }")
+          
+      p The objective is to bring the cube to that blue shiny thinghy trough all obstacles or physic representations, for example, some platform color mean more friction, or no friction at all, othe color mean that the material is like rubber, or that the cube could jump. 
+      p When the player touch the cube for first time, it shows around a range and a vector, now the player need to "draw" a vector in that range, then, the sum of the two should do a force that helps bringing the cube to the objective.
+      

@@ -1,7 +1,22 @@
 {
+  "vector": {
+    "title": "Fuerza Vectorial",
+    "image": "vector.JPG",
+    "id": 5
+  },
+  "bloque": {
+    "title": "Encuentra el bloque",
+    "image": "bloque.jpg",
+    "id": 4
+  },
+  "neon": {
+    "title": "Neon Race",
+    "image": "neon.JPG",
+    "id": 3
+  },
   "bomberline": {
     "title": "Bomberline",
-    "image": "bomberline.JPG",
+    "image": "bomberline.jpg",
     "id": 2
   },
   "ethereal": {
