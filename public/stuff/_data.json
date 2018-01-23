@@ -1,7 +1,22 @@
 {
+  "trivia": {
+    "title": "Tierra de Sabios",
+    "image": "trivia.jpg",
+    "id": 8
+  },
+  "distraer": {
+    "title": "Estudiar Sin Distraerse",
+    "image": "distraer.jpg",
+    "id": 7
+  },
   "vector": {
     "title": "Fuerza Vectorial",
     "image": "vector.JPG",
+    "id": 6
+  },
+  "palabrejas": {
+    "title": "Palabrejas: La Leyenda",
+    "image": "palabrejas.JPG",
     "id": 5
   },
   "bloque": {
